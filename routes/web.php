@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('category', 'CategoriesController')->only(['index', 'show']);
+Route::resource('banner', 'BannersController')->only(['index', 'show']);

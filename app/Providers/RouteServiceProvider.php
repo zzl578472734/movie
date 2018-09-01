@@ -23,7 +23,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // 定义了全局的变量id的规则
+        Route::pattern('id', '/$[0-9]+^/');
 
         parent::boot();
     }
