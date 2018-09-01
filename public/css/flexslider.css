@@ -57,7 +57,7 @@ html[xmlns] .slides {display: block;}
     height: 30px;
     margin: 0;
     display: block;
-    background: url(../images/img-sp.png) no-repeat 0px 0px;
+    background: url(../web/images/img-sp.png) no-repeat 0px 0px;
     position: absolute;
     top: 0;
     z-index: 10;

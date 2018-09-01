@@ -15,6 +15,7 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id')->comment('主键id');
+            $table->integer('cid')->nullable(false)->default(0)->comment('父级分类id');
             $table->string('name')->nullable(false)->default('')->comment('分类的名称');
             $table->string('description', 255)->nullable(false)->default('')->comment('分类的描述');
             $table->tinyInteger('sort')->nullable(false)->default(0)->comment('排序');

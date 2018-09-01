@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'IndexController@index');
 
 Route::resource('category', 'CategoriesController')->only(['index', 'show']);
 Route::resource('banner', 'BannersController')->only(['index', 'show']);

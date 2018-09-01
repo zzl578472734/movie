@@ -18,6 +18,6 @@ class Categories extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'sort', 'created_at', 'updated_at'
+        'cid', 'name', 'description', 'sort', 'created_at', 'updated_at'
     ];
 }

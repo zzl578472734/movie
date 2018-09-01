@@ -13,8 +13,8 @@ class BannersController extends Controller
      */
     public function index()
     {
-        $categories = Banners::query()->where('status', Banners::STATUS_TRUE)->orderBy('sort', 'desc')->get();
-        return response()->json($categories);
+        $banners = Banners::query()->where('status', Banners::STATUS_TRUE)->orderBy('sort', 'desc')->get();
+        return response()->json($banners);
     }
 
     /**
@@ -25,8 +25,8 @@ class BannersController extends Controller
      */
     public function show($id)
     {
-        $category = Banners::query()->where('status', Banners::STATUS_TRUE)->find($id);
-        return response()->json($category);
+        $banner = Banners::query()->where('status', Banners::STATUS_TRUE)->find($id);
+        return response()->json($banner);
     }
 
 }
