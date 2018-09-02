@@ -21,6 +21,7 @@ class CreateCategoriesTable extends Migration
             $table->tinyInteger('sort')->nullable(false)->default(0)->comment('排序');
             $table->tinyInteger('status')->nullable(false)->default(1)->comment('状态：1:表示正常 2:表示未开启');
             $table->timestamps();
+            $table->engine = 'innodb';
         });
     }
 
