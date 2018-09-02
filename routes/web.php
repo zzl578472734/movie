@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('info/{id}', 'InfoController@index');
 
 Route::resource('category', 'CategoriesController')->only(['index', 'show']);
 Route::resource('banner', 'BannersController')->only(['index', 'show']);

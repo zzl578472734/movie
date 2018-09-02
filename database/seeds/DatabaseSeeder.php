@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CategoriesTableSeeder::class,
             BannersTableSeeder::class,
+            MoviesTableSeeder::class,
         ]);
     }
 }

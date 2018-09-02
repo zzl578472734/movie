@@ -13,11 +13,4 @@ class Categories extends Model
     const STATUS_TRUE = 1;
     const STATUS_FALSE = 2;
 
-    /**
-     * 允许批量赋值的指端
-     * @var array
-     */
-    protected $fillable = [
-        'cid', 'name', 'description', 'sort', 'created_at', 'updated_at'
-    ];
 }

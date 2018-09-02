@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banners;
 use App\Models\Categories;
+use App\Models\Movies;
 
 class IndexController extends Controller{
 
@@ -24,9 +25,13 @@ class IndexController extends Controller{
         // 获取banner的数据
         $banners = Banners::query()->where('status', Banners::STATUS_TRUE)->orderBy('sort', 'desc')->get();
 
-        return view('index.index', [
+        // 获取最热门的视频列表
+        $recent_movies = Movies::query()->where('status', Movies::STATUS_RELEASE_SUCCESS)->limit(Movies::RECENT_MOVIES_LIST)->orderBy('hits', 'desc')->get();
+
+        return view('index', [
             'categories' => $categories,
             'banners' => $banners,
+            'recent_movies' => $recent_movies,
         ]);
     }
 
